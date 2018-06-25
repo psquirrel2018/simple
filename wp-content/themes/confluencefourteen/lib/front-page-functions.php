@@ -69,6 +69,34 @@ function simple_metabox() {
     ) );
 
     $cmb_demo->add_field( array(
+        'name' => __( 'Divider Photo 1', 'cmb2' ),
+        'desc' => __( 'Upload an image or enter a URL.  Make sure the image dimensions are 600x600', 'cmb2' ),
+        'id'   => $prefix . 'divider_photo1',
+        'type' => 'file',
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name' => __( 'Divider Photo 2', 'cmb2' ),
+        'desc' => __( 'Upload an image or enter a URL.  Make sure the image dimensions are 600x600', 'cmb2' ),
+        'id'   => $prefix . 'divider_photo2',
+        'type' => 'file',
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name' => __( 'Divider Photo 3', 'cmb2' ),
+        'desc' => __( 'Upload an image or enter a URL.  Make sure the image dimensions are 600x600', 'cmb2' ),
+        'id'   => $prefix . 'divider_photo3',
+        'type' => 'file',
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name' => __( 'Divider Photo 4', 'cmb2' ),
+        'desc' => __( 'Upload an image or enter a URL.  Make sure the image dimensions are 600x600', 'cmb2' ),
+        'id'   => $prefix . 'divider_photo4',
+        'type' => 'file',
+    ) );
+
+    $cmb_demo->add_field( array(
         'name'             => esc_html__( 'Do you want to use this theme\'s custom full screen slider?', 'cmb2' ),
         'desc'             => esc_html__( 'If not, you can use a shortcode to put in a revSlider, wowSlider, or what ever you want.  However, the plugin must also have height and width settings.', 'cmb2' ),
         'id'               => $prefix . 'slider_option',

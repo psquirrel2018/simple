@@ -16,6 +16,10 @@ $welcome = get_post_meta($post->ID, '_simple_frontpage_welcome_title', true);
 $welcome_copy = get_post_meta($post->ID, '_simple_frontpage_welcome_wysiwyg', true);
 $welcome_image = get_post_meta($post->ID, '_simple_frontpage_intro_photo', true);
 
+$divider_image1 = get_post_meta($post->ID, '_simple_frontpage_divider_photo1', true);
+$divider_image2 = get_post_meta($post->ID, '_simple_frontpage_divider_photo2', true);
+
+
 $offer_id = get_post_meta($post->ID, '_simple_frontpage_offer_id', true);
 $review_id = get_post_meta($post->ID, '_simple_frontpage_review_id', true);
 $reviewsUrl = get_post_meta($post->ID, '_simple_frontpage_reviewsUrl', true);
@@ -47,8 +51,6 @@ else {
         </div>
 <?php } ?>
 
-
-
 <div id="intro" class="container-fluid blog-container">
     <div class="row">
         <div class="col-md-8 col col-lg-6" style="padding:0 30px;">
@@ -70,6 +72,15 @@ else {
     </div>
 </div>
 
+<div id="section-divider1" class="">
+    <div class="row">
+        <div class="col-md-12">
+            <img src="<?= $divider_image1; ?>" style="width:100%;" class="img-fluid" />
+        </div>
+    </div>
+</div>
+
+
 
 <?php
 if ($specials === 'yes') { get_template_part('templates/specials-packages'); }
@@ -77,6 +88,8 @@ else {
     $custom_shortcode2 = get_post_meta($post->ID, '_simple_frontpage_custom_shortcode2', true );
     echo do_shortcode( $custom_shortcode2 );
 } ?>
+
+
 
 <?php
 if ($didYouKnow === 'yes') { get_template_part('templates/did-you-know'); }
@@ -97,7 +110,7 @@ $loopResults = $loop->get_posts();
         </div>
     </div>
     <?php foreach ($loopResults as $blogPost): ?>
-        <div class="row latest-post">
+        <div class="row latest-post py-2">
             <?php
             $postTitle = get_the_title($blogPost->ID);
             $image_ID = get_post_thumbnail_id($blogPost->ID);
@@ -122,6 +135,14 @@ $loopResults = $loop->get_posts();
     <?php endforeach; ?>
 </div>
 </section>
+
+<div id="section-divider2" class="">
+    <div class="row">
+        <div class="col-md-12">
+            <img src="<?= $divider_image2; ?>" style="width:100%;" class="img-fluid" />
+        </div>
+    </div>
+</div>
 
 <?php get_footer(); ?>
 

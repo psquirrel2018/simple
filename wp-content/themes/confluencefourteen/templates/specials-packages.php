@@ -23,9 +23,11 @@ $specials_four_cta = get_post_meta($post->ID, '_simple_frontpage_specials_four_c
 $specials_five = get_post_meta($post->ID, '_simple_frontpage_specials_five', true);
 $specials_five_copy = get_post_meta($post->ID, '_simple_frontpage_specials_five_copy', true);
 $specials_five_cta = get_post_meta($post->ID, '_simple_frontpage_specials_five_cta', true);
+
+$divider_image3 = get_post_meta($post->ID, '_simple_frontpage_divider_photo3', true);
 ?>
 
-<div id="our-specials" class="how-we-work" style="padding:60px 0;background: rgba(0,165,226,0.4);">
+<div id="our-specials" class="how-we-work" style="padding:60px 0;">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -89,6 +91,14 @@ $specials_five_cta = get_post_meta($post->ID, '_simple_frontpage_specials_five_c
                     </li>
                 </ol>
             </div>
+        </div>
+    </div>
+</div>
+
+<div id="section-divider1" class="">
+    <div class="row">
+        <div class="col-md-12">
+            <img src="<?= $divider_image3; ?>" style="width:100%;" class="img-fluid" />
         </div>
     </div>
 </div>
