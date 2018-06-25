@@ -4,26 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head();
     $site_logo = cws_theme_get_option( 'cws_theme_logo' );
-    $site_phone = cws_theme_get_option( 'cws_theme_phone' );
-    $site_email = cws_theme_get_option( 'cws_theme_email' );
-
-    $font_selected = cws_theme_get_option( 'cws_theme_font' );
-
-    // If (Option Lato True)
-    if ( $font_selected === 'lato' ) {
-        wp_enqueue_style('Lato','https://fonts.googleapis.com/css?family=Lato:400,700,900');
-    } else {
-        wp_enqueue_style('montserrat','https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,900');
-    }
+    $top_bar = cws_theme_get_option( 'cws_theme_top_bar' );
+    $header_background = cws_theme_get_option( 'cws_theme_color' );
     ?>
 </head>
 <body <?php body_class(); ?>>
 
-<a href="#" class="back-to-top" title="Back to top">
-    <i class="icon-arrow-up"></i>
-</a>
-
 <header class="header-type-1">
+    <?php if($top_bar === 'yes') {
+         get_template_part('templates/top-bar');
+    }
+    ?>
+
     <div class="container-fluid2">
         <div class="row">
             <div class="col-md-12">
@@ -32,7 +24,7 @@
                     <div class="main-menu">
                         <!-- example 2 - using auto margins -->
 
-                        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                        <nav class="navbar navbar-expand-md navbar-dark <?= $header_background; ?>">
                             <div class="container">
 
                                 <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
