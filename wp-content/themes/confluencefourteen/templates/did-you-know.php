@@ -8,6 +8,8 @@
 $welcome2 = get_post_meta($post->ID, '_simple_frontpage_welcome_title2', true);
 $welcome_copy2 = get_post_meta($post->ID, '_simple_frontpage_welcome_wysiwyg2', true);
 $welcome_image2 = get_post_meta($post->ID, '_simple_frontpage_welcome_image2', true);
+
+$divider_image4 = get_post_meta($post->ID, '_simple_frontpage_divider_photo4', true);
 ?>
 
 <div class="container-fluid bg-grey pvvl" style="padding:60px 0;">
@@ -20,6 +22,14 @@ $welcome_image2 = get_post_meta($post->ID, '_simple_frontpage_welcome_image2', t
         </div>
         <div class="flex-1 pos-rel">
             <?= $welcome_image2; ?>
+        </div>
+    </div>
+</div>
+
+<div id="section-divider1" class="">
+    <div class="row">
+        <div class="col-md-12">
+            <img src="<?= $divider_image4; ?>" style="width:100%;" class="img-fluid" />
         </div>
     </div>
 </div>
