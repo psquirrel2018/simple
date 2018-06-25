@@ -27,8 +27,8 @@ TABLE OF CONTENTS
 //  01 - Reset
 /////////////////////////////////////////////////////////////////////*/
 #intro {padding:60px 0;}
-.blog-container {background-color: #b5bcc2;}
-#slide-container {background-color: #b5bcc2;}
+/*.blog-container {background-color: #b5bcc2;}
+#slide-container {background-color: #b5bcc2;}*/
 #main {max-width:1240px; margin:10px auto; padding:10px;}
 .contentContainer {border:1px solid #333333;float:left; padding:10px; min-height:400px;}
 .sidebar {float:left; padding:10px; border:1px dashed #000000; margin-left:5px;}
@@ -215,4 +215,16 @@ max-width: 1560px;
 /* Here's the new CSS to add... */
 .admin-bar .header-type-1 {
     top: 32px;
+}
+
+.navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.8);
+}
+#top-bar a {
+    color: rgba(0,0,0,.8);
 }

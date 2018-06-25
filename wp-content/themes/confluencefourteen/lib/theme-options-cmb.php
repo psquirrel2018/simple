@@ -135,6 +135,21 @@ class cws_Admin {
             ),
         ) );
 
+        //Color options
+
+        $cmb->add_field( array(
+            'name'             => esc_html__( 'Select the Font you want to use for headers and navigation items', 'cmb2' ),
+            'desc'             => esc_html__( 'field description (optional)', 'cmb2' ),
+            'id'               => 'cws_theme_color',
+            'type'             => 'select',
+            'show_option_none' => false,
+            'options'          => array(
+                'Dark'   => esc_html__( 'bg-dark', 'cmb2' ),
+                'Light'     => esc_html__( 'bg-light', 'cmb2' ),
+                'Custom'     => esc_html__( 'custom', 'cmb2' ),
+            ),
+        ) );
+
         //Font options
 
         $cmb->add_field( array(
@@ -152,6 +167,19 @@ class cws_Admin {
                 'Roboto-slab'     => esc_html__( 'Roboto Slab', 'cmb2' ),
                 'Poppins'     => esc_html__( 'Poppins', 'cmb2' ),
                 'Karla'     => esc_html__( 'Karla', 'cmb2' ),
+            ),
+        ) );
+
+        //Top bar config section
+
+        $cmb->add_field( array(
+            'name'             => esc_html__( 'Do you want to use the top bar?', 'cmb2' ),
+            'desc'             => esc_html__( 'This is the thin horizontal bar that will go above the logo and menu and house the phone# and email...', 'cmb2' ),
+            'id'               => $prefix . 'cws_theme_top_bar',
+            'type'             => 'radio_inline',
+            'show_option_none' => 'No',
+            'options'          => array(
+                'yes' => esc_html__( 'Yes', 'cmb2' )
             ),
         ) );
 
